@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Login</title> 
+     <link rel="stylesheet" href="../static/css/login.css"> 
+ </head> 
+  
+ <body> 
+    <script src="../static/js/loading.js"></script>
+     <!--Formulário para login--> 
+     <div class="c-loader" id="c-loader"></div>
+     <div class="box"> 
+        <form>
+             <fieldset> 
+                 <legend><b>Login</b></legend> 
+                 <br> 
+                 <div class="inputBox"> 
+                     <label for="email"><b>Usuário</b></label> 
+                     <input name="email" type="text" class="inputUser" required id="email"/><br /> 
+                 </div> 
+                 <br> 
+                 <div class="inputBox"> 
+                     <label for="password"><b>Senha</b></label> 
+                     <input name="password" type="password" class="inputUser" required id="password"/><br /> 
+                 </div> 
+                     <br> 
+                     <button type="button" id="login-button"  onclick="login()">enviar</button>
+                     <p> 
+                         <a href="/recuperar"><b>Esqueceu a senha?</b></a> ㅤ <a href="/registro"><b>Cadastrar</b></a> 
+                     </p>  
+             </fieldset>   
+        </form>        
+
+     </div>   
+     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-compat.js"></script>
+<script src="../static/js/firebase-init.js"></script>
+
+<script src="../static/js/index.js"></script>
+<script src="../static/js/validations.js"></script>
+ </body> 
+
+ </html>

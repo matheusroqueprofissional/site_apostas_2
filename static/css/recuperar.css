@@ -1,0 +1,43 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+} 
+
+body { 
+    width: 100vw; 
+    height: 100vh; 
+    background: url(https://img.wallpapic-br.com/i6793-333-517/medium/madeira-de-marrons-claro-imagem-de-fundo.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+} 
+
+form { 
+    height: 320px; 
+    background-color: rgba(243, 237, 237, 0.384); 
+    max-width: 720px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    justify-content: center; 
+    margin: 0 auto; 
+    border-radius: 20px; 
+} 
+
+label { 
+    font-size: 2rem; 
+    color: #000; 
+} 
+
+input { 
+    width: 80%; 
+
+    height: 50px; 
+    border-radius: 10px; 
+} 
+
+button { 
+    width: 80%; 
+    height: 50px; 
+    border-radius: 10px; 
+} 
