@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../static/css/paginainicia.css">
-    <link rel="stylesheet" href="../static/css/global.css">
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@600&display=swap');
+</style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/css/paginajogo.css">
 </head>
 <body>
     <header>
+
+        
+
+
         <div class="lista_liks_header">
             <a class="links_header" href="">Todos os jogos</a>
             <a class="links_header" href="">Jogos Feminino</a>
             <a class="links_header" href="">Jogos Masculino</a>
             <a class="links_header" href="">Sobre</a>
             <a class="links_header" href="">Politicas do site</a>
-            <a class="links_header" href="/login">Login</a>
-            <a class="links_header" href="/registro">Registrar</a>
+            <a class="links_header"" href="#" onclick="logout()">LOGOUT</a>
             <a class="links_header" href="">mais</a>
         </div>
         <div class="redes_sociais">
@@ -48,29 +53,42 @@
         <section class="top">
             <img class="imagem_aguia" src="../static/images/imagem_aguia_branca.png" alt="">
         </section>
-        <section class="background_bola">
-            <img class="img_background_bola" src="https://static.wixstatic.com/media/bc37cf_c63ff01e71d0467f9b292f7961081f08~mv2.jpeg/v1/fill/w_980,h_780,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bc37cf_c63ff01e71d0467f9b292f7961081f08~mv2.jpeg" alt="">
-            <div class="title_background_title">
-                <h1 class="title_background">As melhores odds do mercado</h1>
-            </div>
+        <section class="section01">
+            <img class="santosvsredbullimage" src="../static/images/imagem_santos_vs_redbul.png" alt="">
         </section>
-        <section class="jogos">
-            <div class="jogo01">
-                <div class="quadrado_jogo">
-                    <a href="/jogos"><img class="img_jogo" src="../static/images/img jogo01.jpeg" alt=""></a>
-                    <h1 class="title_jogos title_jogo03">JOGO x</h1>
-                </div>
+        <section class="section02">
+            <div class="retangulo_escolha">
+                <h1>Escolha suas apostas no jogo entre Santos x RedBull Bragantino</h1>
             </div>
-            <div class="jogo02">
-                <div class="quadrado_jogo">
-                    <a href="/jogos"><img class="img_jogo" src="../static/images/img jogo01.jpeg" alt=""></a>
-                    <h1 class="title_jogos title_jogo03">JOGO y</h1>
-                </div>
-            </div>
-            <div class="jogo03">
-                <div class="quadrado_jogo">
-                    <a href="/jogos"><img class="img_jogo" src="../static/images/img jogo01.jpeg" alt=""></a>
-                    <h1 class="title_jogos title_jogo03">JOGO Z</h1>
+            <div class="a">
+                <div class="branco campeonato">
+                    <p>Campeonato Brasileiro</p>
+                    <div class="resultado_final">
+                        <div class="resultado_final_title">
+                            <h2>Resultado Final</h2>
+                        </div>
+                        <div class="area_jogo">
+                            <p>Santos x RB Bragantino</p>
+                            <div class="botoes">
+                                <button class="btn_santos">Santos</button>
+                                <button class="btn_empate">Empate</button>
+                                <button class="btn_rb_bragantino">RB Bragantino</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="placar">
+                        <div class="Placar_do_jogo">
+                            <h2>Placar do jogo</h2>
+                        </div>
+                        <div class="area_jogo">
+                            <p>Santos x RB Bragantino</p>
+                            <div class="botoes">
+                                <button class="btn_santos">Santos</button>
+                                <button class="btn_empate">Empate</button>
+                                <button class="btn_rb_bragantino">RB Bragantino</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -78,17 +96,16 @@
     <footer>
         <div class="black_area">
             <img class="imagem_aguia_footer" src="../static/images/black_aguia.png" alt="">
-            <div class="ligas">
-                <select>
-                    <option value="seleção01">seleção01</option>
-                    <option value="seleção02">seleção02</option>
-                    <option value="seleção03">seleção03</option>
-                </select>
-            </div>
         </div>
         <div class="white_area">
             <img src="../static/images/Screenshot 2023-05-07 030404.png" alt="">
         </div>
     </footer>
+    <script src="../static/js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-compat.js"></script>
+    <script src="../static/js/firebase-init.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/logout.js"></script>
+    <script src="../static/js/auth_guard.js"></script>
 </body>
 </html>

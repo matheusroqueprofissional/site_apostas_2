@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@600&display=swap');
+.background_bola{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.img_background_bola{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100%;
+}
+.title_background_title{
+    width: 100%;
+    display: flex;
+    align-items: right;
+    position: absolute;
+    height: 100%;
+}
+
+.title_background{
+    font-size: 92px;
+    position: absolute;
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Poppins', sans-serif;
+    width:50%;
+    
+}
+
+
+.jogos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+    position: relative;
+    top: 5vh;
+}
+.quadrado_jogo{
+    width: 400px;
+    height: 500px;
+    background-color: red;
+}
+
+.img_jogo{
+    width: 100%;
+    height: 100%;
+}

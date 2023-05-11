@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif; 
     width: 50%; 
     margin: 1rem auto; 
-    background: url(https://img.freepik.com/fotos-gratis/parede-de-madeira-riscado-conceito-material-da-textura-do-fundo_53876-30226.jpg?w=2000); 
+    background-image: url("../images/fundo login.png");
     background-size: cover; 
     -webkit-font-smoothing: antialiased; 
     background-repeat: no-repeat; 

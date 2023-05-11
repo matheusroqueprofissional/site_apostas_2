@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@600&display=swap');
+body{
+    margin: 0;
+    gap: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191919;
+}
+.lista_liks_header{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links_header{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 50px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Poppins', sans-serif;
+   
+}
+.links_header:hover{
+    color: #f6ff00;
+    animation-duration: 1000ms;
+}
+
+.redes_sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo_face,
+.logo_insta,
+.logo_pinterest{
+    width: 35px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.section01{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/*footer*/
+
+footer{
+    position: relative;
+    top: 20vh;
+}
+.black_area{
+    background-color: black;
+}
+
+.white_area{
+    background-color: #f7f7f7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

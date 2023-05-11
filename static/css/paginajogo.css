@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@600&display=swap');
+body{
+    margin: 0;
+    gap: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191919;
+}
+.lista_liks_header{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links_header{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 50px;
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.redes_sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo_face,
+.logo_insta,
+.logo_pinterest{
+    width: 35px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.section01{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.santosvsredbullimage{
+    width: 100%;
+}
+
+/*abaixo da imagem de santos vs redbull*/
+.retangulo_escolha{
+    width: 100%;
+    height: auto;
+    background-image: url("../images/background_escolha.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.section02{
+    background-color: #044A25;
+}
+.a{
+    width: 100%;
+    background-color: #044A25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.campeonato{
+    width: 90%;
+    background-color: #044A25;
+    border: 3px solid black;
+}
+
+.branco{
+    color: white;
+}
+
+.resultado_final_title{
+    border-top: solid black;
+    border-bottom: 3px solid black;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+}
+
+.btn_santos,
+.btn_empate,
+.btn_rb_bragantino
+{
+    background-color: #03351a;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn_santos:hover,
+.btn_empate:hover,
+.btn_rb_bragantino:hover{
+    background-color: #011d0e;
+    border: #03351a 1px solid;
+}
+
+.Placar_do_jogo h2{
+    width: 100%;
+    border-top: solid black;
+    border-bottom: 3px solid black;
+}
+
+
+/*footer*/
+
+.black_area{
+    background-color: black;
+}
+
+.white_area{
+    background-color: #f7f7f7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

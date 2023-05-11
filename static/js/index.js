@@ -25,7 +25,8 @@ function login(){
         email.value,password.value
     ).then(response=>{
         hideLoading();
-        window.location.href = "https://cadupiacente67.wixsite.com/eaglewager"
+        alert("login efetuado com sucesso");
+        window.location.href = "/jogos"
     }).catch(error=>{
         hideLoading();
         alert(getErrorMessge(error))

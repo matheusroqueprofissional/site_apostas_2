@@ -1,7 +1,7 @@
 firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged(user=>{
     if(user){
-        window.location.href = "/busca"
+        window.location.href = "/jogos"
     }
 })
 
