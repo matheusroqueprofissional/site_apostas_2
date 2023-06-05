@@ -55,3 +55,4 @@ def getH2H():
 #print(getTabela(153))
 #print(getJogos(153))
 #print(getJogos())
+print(getH2H())
