@@ -56,3 +56,5 @@ def getH2H():
 #print(getJogos(153))
 #print(getJogos())
 print(getH2H())
+
+#Ja foi solicitado para o suporte da API
