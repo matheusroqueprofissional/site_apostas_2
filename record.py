@@ -36,7 +36,7 @@ def getTabela(league_id):
     return responseGetTabelaPretty
 
 def getJogos():
-    responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&timezone=+07:00&APIkey={API_KEY}')
+    responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&from=2023-05-01&to=2025-12-31&timezone=+07:00&APIkey={API_KEY}')
     responsegetJogosPretty = json.dumps(responsegetJogos.json(), indent=5)
     return responsegetJogosPretty
 
@@ -54,3 +54,4 @@ def getH2H():
 #print(getTimes(153))
 #print(getTabela(153))
 #print(getJogos(153))
+#print(getJogos())
