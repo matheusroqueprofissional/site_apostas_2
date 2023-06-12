@@ -36,25 +36,19 @@ def getTabela(league_id):
     return responseGetTabelaPretty
 
 def getJogos():
-    responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&from=2023-05-01&to=2025-12-31&timezone=+07:00&APIkey={API_KEY}')
+    responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&from=2023-05-01&to=2025-12-31&APIkey={API_KEY}')
     responsegetJogosPretty = json.dumps(responsegetJogos.json(), indent=5)
     return responsegetJogosPretty
 
-def getStatus():
-    responsegetStatus = requests.get(f'{BASE_URL}?action=get_statistics&match_id=86392&APIkye={API_KEY}')
+def getStatus(match_id):
+    responsegetStatus = requests.get(f'{BASE_URL}?action=get_statistics&match_id={match_id}&APIkye={API_KEY}')
     responsegetStatusPretty = json.dumps(responsegetStatus.json(), indent=6)
     return responsegetStatusPretty
 
-def getH2H():
-    responsegetH2H = requests.get(f'{BASE_URL}?action=get_H2H&firstTeamId=7275&secondTeamId=151&APIkey={API_KEY}')
-    responsegetH2HPretty = json.dumps(responsegetH2H.json(), indent=5)
-    responsegetH2HPretty
     
 #print(getLigasDisponiveis())
 #print(getTimes(153))
-#print(getTabela(153))
-#print(getJogos(153))
+#print(getTabela(3))
 #print(getJogos())
-print(getH2H())
+print(getStatus(176164))
 
-#Ja foi solicitado para o suporte da API
