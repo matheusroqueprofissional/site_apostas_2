@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/paginajogo.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
 
 
         <div class="lista_liks_header">
-            <a class="links_header" href="">Todos os jogos</a>
+            <a class="links_header" href="/">Todos os jogos</a>
             <a class="links_header" href="">Jogos Feminino</a>
             <a class="links_header" href="">Jogos Masculino</a>
             <a class="links_header" href="">Sobre</a>
@@ -70,9 +71,18 @@
                         <div class="area_jogo">
                             <p>Santos x RB Bragantino</p>
                             <div class="botoes">
-                                <button class="btn_santos">Santos</button>
-                                <button class="btn_empate">Empate</button>
-                                <button class="btn_rb_bragantino">RB Bragantino</button>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="Santos" id="Santos">
+                                     <input   type = "submit" class="btn_santos" value="Santos">
+                                </form>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="Empate" id="Empate">
+                                     <input   type = "submit" class="btn_empate" value="Empate">
+                                </form>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="RBBragantino" id="RBBragantino">
+                                     <input   type = "submit" class="btn_rb_bragantino" value="RBBragantino">
+                                </form>                                                       
                             </div>
                         </div>
                     </div>
@@ -83,9 +93,18 @@
                         <div class="area_jogo">
                             <p>Santos x RB Bragantino</p>
                             <div class="botoes">
-                                <button class="btn_santos">Santos</button>
-                                <button class="btn_empate">Empate</button>
-                                <button class="btn_rb_bragantino">RB Bragantino</button>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="Santos" id="Santos">
+                                     <input   type = "submit" class="btn_santos" value="Santos">
+                                </form>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="Empate" id="Empate">
+                                     <input   type = "submit" class="btn_empate" value="Empate">
+                                </form>
+                                <form action="/enviar" method="post">
+                                    <input style="display:none;" name = "bt" type="text" value="RBBragantino" id="RBBragantino">
+                                     <input   type = "submit" class="btn_rb_bragantino" value="RBBragantino">
+                                </form>                           
                             </div>
                         </div>
                     </div>
@@ -107,5 +126,46 @@
     <script src="../static/js/script.js"></script>
     <script src="../static/js/logout.js"></script>
     <script src="../static/js/auth_guard.js"></script>
+
+    <script>
+         const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    const voto = button.value;
+
+    fetch('/palpite_confirmado', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ voto: voto })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Voto enviado com sucesso:', data);
+      // Lógica adicional ou feedback para o usuário
+    })
+    .catch(error => {
+      console.error('Erro ao enviar voto:', error);
+      // Lógica adicional ou feedback para o usuário
+    });
+  });
+});
+
+function blockButtons() {
+    var btnSantos = document.getElementById("btn_santos");
+    var btnEmpate = document.getElementById("btn_empate");
+    var btnRB = document.getElementById("btn_rb_bragantino");
+
+    btnSantos.disabled = true;
+    btnEmpate.disabled = true;
+    btnRB.disabled = true;
+}
+
+document.getElementById("btn_santos").addEventListener("click", blockButtons);
+document.getElementById("btn_empate").addEventListener("click", blockButtons);
+document.getElementById("btn_rb_bragantino").addEventListener("click", blockButtons);
+    </script>
 </body>
 </html>
