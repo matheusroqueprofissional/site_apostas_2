@@ -1,15 +1,22 @@
 import requests
 import json
+
+
+API_KEY = "0daf50d6c4caa5f7ae3513bc52162612a78fd43fe65d6ea8842bb8cd8a26e914"
+BASE_URL = "https://apiv3.apifootball.com"
+
+
 import pytz
 from datetime import datetime
 
 API_KEY = "0daf50d6c4caa5f7ae3513bc52162612a78fd43fe65d6ea8842bb8cd8a26e914"
 BASE_URL = "https://apiv3.apifootball.com"
 #print("funciona")
+
 def getPaisesDisponiveis():
     responseGetCountries = requests.get(f'{BASE_URL}/?action=get_countries&APIkey={API_KEY}')
     ListaFiltradaSemLogoPais = []
-    print(responseGetCountries)
+
     for country in responseGetCountries.json():
         country.pop('country_logo', None)
         ListaFiltradaSemLogoPais.append(country)
@@ -38,12 +45,30 @@ def getTabela(league_id):
     #responseGetTabelaPretty.country_name
     return responseGetTabelaPretty
 
+
+def getJogos():
+    responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&from=2023-05-01&to=2025-12-31&APIkey={API_KEY}')
+
 def getJogos(league_id):
     #tz = pytz.timezone('Europe/Berlin')
     responsegetJogos = requests.get(f'{BASE_URL}?action=get_events&from=2023-02-12&to=2023-12-31&league_id={league_id}&APIkey={API_KEY}')
+
     responsegetJogosPretty = json.dumps(responsegetJogos.json(), indent=5)
-    print(responsegetJogos)
     return responsegetJogosPretty
+
+
+def getStatus(match_id):
+    responsegetStatus = requests.get(f'{BASE_URL}?action=get_statistics&match_id={match_id}&APIkye={API_KEY}')
+    responsegetStatusPretty = json.dumps(responsegetStatus.json(), indent=6)
+    return responsegetStatusPretty
+
+    
+#print(getLigasDisponiveis())
+#print(getTimes(153))
+#print(getTabela(3))
+#print(getJogos())
+#print(getStatus(176164))
+
 
 #def getJogosPassados(league_id):
 #    tz = pytz.timezone('Europe/London')
