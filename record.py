@@ -50,5 +50,5 @@ def getStatus(match_id):
 #print(getTimes(153))
 #print(getTabela(3))
 #print(getJogos())
-print(getStatus(176164))
+#rint(getStatus(176164))
 
